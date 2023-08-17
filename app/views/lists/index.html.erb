@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>See any kind of movies</strong></h1>
+    <a class="btn btn-flat" href="#content">Find out more</a>
+  </div>
+</div>
+
+<ul id="content" class="mt-3">
+
+  <% @lists.each do |l| %>
+  <li>
+    <%= link_to l.name, list_path(l) %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to '+ New', new_list_path, class:"btn btn-flat rounded-pill"  %>
