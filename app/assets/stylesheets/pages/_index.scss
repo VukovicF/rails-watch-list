@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 .banner {
+  background-image: asset-url("image.jpg");
   background-size: cover;
   background-position: center;
   padding: 150px 0;
