@@ -1,17 +1,30 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <%= link_to "New List", new_list_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Home", lists_path, class: "nav-link" %>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
 <div class="banner">
   <div class="container">
-    <h1>See any kind of movies</strong></h1>
+    <h1><strong>Make Your Own Whatchlist</strong></h1>
+    <h2>Entertain Yourself </h2>
     <a class="btn btn-flat" href="#content">Find out more</a>
   </div>
 </div>
-
-<ul id="content" class="mt-3">
-
-  <% @lists.each do |l| %>
-  <li>
-    <%= link_to l.name, list_path(l) %>
-  </li>
-  <% end %>
-</ul>
-
-<%= link_to '+ New', new_list_path, class:"btn btn-flat rounded-pill"  %>
+<div class="container my-3">
+  <div class="row row-cols-4">
+    <% @lists.each do |l| %>
+        <div class="card-category col-sm-6 me-5 mb-3" style="width: 12rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('popcorn.jpg') %>')" >
+          <h5 class="card-title"><%= link_to l.name, lists_path, class:"text-decoration-none text-light"%></h5>
+        </div>
+    <% end %>
+  </div>
+</div>

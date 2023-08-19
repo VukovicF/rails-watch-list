@@ -1,7 +1,12 @@
 // Import page-specific CSS files here.
 @import "home";
+
+body{
+  background-color: rgb(29, 7, 22);
+}
+
 .banner {
-  background-image: asset-url("image.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url("movie.png");
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -15,7 +20,7 @@
   font-weight: bold;
 }
 
-.banner p {
+.banner h2 {
   font-size: 20px;
   color: white;
   opacity: .7;
@@ -23,14 +28,33 @@
 }
 
 .btn-flat {
-  color: white;
+  color: #F5FFFA;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: rgb(97, 32, 74);
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #4D04C4;
+  background: rgb(132, 50, 103);
+  color: #F5FFFA;
+}
+
+.card{
+  justify-content: space-between;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
